@@ -1,12 +1,11 @@
 
 import 'dart:ui';
 
-class ClassName {
+class ColorsManger {
   
 
   static const Color mainBlue = Color(0xFF247CFF);
-  static const Color secondaryColor = Color(0xFF03DAC6);
-  static const Color backgroundColor = Color(0xFFF5F5F5);
+  static const Color gray = Color(0xFF757575);
   static const Color textColor = Color(0xFF000000);
   static const Color errorColor = Color(0xFFB00020);
 }
