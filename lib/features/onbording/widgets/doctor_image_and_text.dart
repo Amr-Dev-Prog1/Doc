@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/theming/styles.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class DoctorImageAndText extends StatelessWidget {
@@ -27,10 +28,10 @@ class DoctorImageAndText extends StatelessWidget {
                       ),
                     ),
                     child: Image.asset(
-                      
-                      'assets/images/Image.png',
-                     
-                    ),
+                     'assets/images/Image.png',
+                     width: 1.sw, // عرض الشاشة
+                      fit: BoxFit.cover,
+                  ),
                   ),
                   Positioned(
                     bottom: 30,
@@ -39,7 +40,7 @@ class DoctorImageAndText extends StatelessWidget {
                     child: Text("Best Doctor Appointment App",
                       textAlign: TextAlign.center,
                       style: TextStyles.font32BlueBold.copyWith(
-                        height: 1.5
+                        height: 1.5.h
                       ),
                     ),
 

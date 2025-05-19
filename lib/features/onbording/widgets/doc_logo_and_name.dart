@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class DocLogoAndName extends StatelessWidget {
@@ -12,12 +13,12 @@ class DocLogoAndName extends StatelessWidget {
                    children: [
                      SvgPicture.asset(
                       'assets/svgs/DocDoc-logo.svg',
-                      width: 40,
-                      height: 40,
+                      width: 40.w,
+                      height: 40.h,
                                      ),
-                      const Text("DocDoc"
+                       Text("DocDoc"
                       ,style: TextStyle(
-                        fontSize: 24,
+                        fontSize: 24.sp,
                         fontWeight: FontWeight.bold,
                       ),
                       ),
