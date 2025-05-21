@@ -83,13 +83,13 @@ class _LoginTextFieldState extends State<LoginTextField> {
         labelText: widget.labelText,
         hintText: widget.hintText,
         filled: true,
-        fillColor: ColorsManger.moreLigthGray,
+        fillColor: ColorsManger.moreligtgray,
         hintStyle: widget.hintStyle ?? TextStyles.font14lightGrayNormal,
         labelStyle: TextStyles.font16BlueSemiBold,
         border: widget.enabledborder ??
             OutlineInputBorder(
               borderRadius: BorderRadius.circular(15.0),
-              borderSide: BorderSide(color: ColorsManger.lightergray),
+              borderSide: BorderSide(color: ColorsManger.ligtergray),
             ),
         focusedBorder: widget.focusedBorder ??
             OutlineInputBorder(

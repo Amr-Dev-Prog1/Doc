@@ -27,10 +27,10 @@ class _LoginScreenState extends State<LoginScreen> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("Welcome Back", style: TextStyles.font24BlueBold),
+              Text("Welcome Back", style: TextStyles.font32BlueBold),
              heightSpace( 10),
               Text("We're excited to have you back, can't wait to see what you'vebeen up to since you last logged in.",
-                style: TextStyles.font15GrayNormal),
+                style: TextStyles.font13GrayNormal),
              heightSpace( 36),
 
              Form(
