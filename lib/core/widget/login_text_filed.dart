@@ -3,103 +3,79 @@ import 'package:flutter_application_1/core/theming/colors.dart';
 import 'package:flutter_application_1/core/theming/styles.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class LoginTextField extends StatefulWidget {
-  final String hintText;
-  final String labelText;
-  final bool obscureText;
-  final InputBorder? enabledborder;
-  final InputBorder? focusedBorder;
+class AppTextFormField extends StatelessWidget {
   final EdgeInsetsGeometry? contentPadding;
+  final InputBorder? focusedBorder;
+  final InputBorder? enabledBorder;
+  final TextStyle? inputTextStyle;
   final TextStyle? hintStyle;
-  final TextStyle? inputStyle;
+  final String hintText;
+  final bool? isObscureText;
   final Widget? suffixIcon;
+  final Color? backgroundColor;
   final TextEditingController? controller;
-  final String? Function(String?)? validator;
-  final void Function(String)? onChanged;
-  final TextInputType? keyboardType;
-final Color? backgroundColor;
-
-
-  const LoginTextField({
+  final Function(String?) validator;
+  const AppTextFormField({
     super.key,
-    required this.hintText,
-    required this.labelText,
-    required this.obscureText,
     this.contentPadding,
-    this.hintStyle,
-    this.inputStyle,
-    this.suffixIcon,
-    this.enabledborder,
     this.focusedBorder,
-    this.controller,
-    this.validator,
-    this.onChanged,
-    this.keyboardType, 
+    this.enabledBorder,
+    this.inputTextStyle,
+    this.hintStyle,
+    required this.hintText,
+    this.isObscureText,
+    this.suffixIcon,
     this.backgroundColor,
+    this.controller,
+    required this.validator,
   });
-
-  @override
-  State<LoginTextField> createState() => _LoginTextFieldState();
-}
-
-class _LoginTextFieldState extends State<LoginTextField> {
-  late bool _obscure;
-
-  @override
-  void initState() {
-    super.initState();
-    _obscure = widget.obscureText;
-  }
-
-  void _toggleObscure() {
-    setState(() {
-      _obscure = !_obscure;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      controller: widget.controller,
-      obscureText: _obscure,
-      style: widget.inputStyle ?? TextStyles.font16DarkBlueMedium,
-      validator: widget.validator,
-      onChanged: widget.onChanged,
-      keyboardType: widget.keyboardType,
+      controller: controller,
       decoration: InputDecoration(
         isDense: true,
-        contentPadding: widget.contentPadding ??
-            EdgeInsets.symmetric(vertical: 20.0.w, horizontal: 18.0.h),
-        suffixIcon: widget.suffixIcon ??
-            (widget.obscureText
-                ? IconButton(
-                    icon: Icon(
-                      _obscure ? Icons.visibility_off : Icons.visibility,
-                      color: ColorsManger.mainBlue,
-                    ),
-                    onPressed: _toggleObscure,
-                  )
-                : null),
-        labelText: widget.labelText,
-        hintText: widget.hintText,
-        filled: true,
-        fillColor: ColorsManger.moreligtgray,
-        hintStyle: widget.hintStyle ?? TextStyles.font14lightGrayNormal,
-        labelStyle: TextStyles.font16BlueSemiBold,
-        border: widget.enabledborder ??
+        contentPadding:
+            contentPadding ??
+            EdgeInsets.symmetric(horizontal: 20.w, vertical: 18.h),
+        focusedBorder:
+            focusedBorder ??
             OutlineInputBorder(
-              borderRadius: BorderRadius.circular(15.0),
-              borderSide: BorderSide(color: ColorsManger.ligtergray),
-            ),
-        focusedBorder: widget.focusedBorder ??
-            OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8.0),
-              borderSide: BorderSide(
-                width: 1.3,
+              borderSide: const BorderSide(
                 color: ColorsManger.mainBlue,
+                width: 1.3,
               ),
+              borderRadius: BorderRadius.circular(16.0),
             ),
+        enabledBorder:
+            enabledBorder ??
+            OutlineInputBorder(
+              borderSide: const BorderSide(
+                color: ColorsManger.lightGray,
+                width: 1.3,
+              ),
+              borderRadius: BorderRadius.circular(16.0),
+            ),
+        errorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: Colors.red, width: 1.3),
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: Colors.red, width: 1.3),
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+        hintStyle: hintStyle ?? TextStyles.font14LightGraynormal,
+        hintText: hintText,
+        suffixIcon: suffixIcon,
+        fillColor: backgroundColor ?? ColorsManger.moreLightGray,
+        filled: true,
       ),
+      obscureText: isObscureText ?? false,
+      style: TextStyles.font13DarkBlueMedium,
+      validator: (value) {
+        return validator(value);
+      },
     );
   }
 }

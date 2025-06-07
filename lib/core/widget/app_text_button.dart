@@ -52,7 +52,7 @@ class AppTextButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         butnText,
-        style: textStyle ?? TextStyles.font16DarkBlueMedium
+        style: textStyle ?? TextStyles.font15DarkBlueMedium
       ),
     );
   }
