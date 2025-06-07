@@ -6,18 +6,14 @@ class AlreadyHaveAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return             RichText(
-  text: TextSpan(
-    text: 'Dont have an account? ',
-    style: TextStyles.font16DarkBlueMedium,
-    children: [
-      TextSpan(
-        text: 'Sing Up',
-        style: TextStyles.font13BlueNormal
+    return RichText(
+      text: TextSpan(
+        text: 'Dont have an account? ',
+        style: TextStyles.font13Bluenormal,
+        children: [
+          TextSpan(text: 'Sing Up', style: TextStyles.font15DarkBlueMedium),
+        ],
       ),
-    ],
-  ),
-)
-;
+    );
   }
 }
