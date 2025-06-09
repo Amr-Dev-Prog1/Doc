@@ -28,7 +28,7 @@ class TextStyles {
     color: ColorsManger.darkBlue,
   );
 
-  static TextStyle font13DarkBluenormal = TextStyle(
+  static TextStyle font13DarkBlueRegular = TextStyle(
     fontSize: 13.sp,
     fontWeight: FontWeightHelper.normal,
     color: ColorsManger.darkBlue,
@@ -46,13 +46,13 @@ class TextStyles {
     color: Colors.white,
   );
 
-  static TextStyle font13Graynormal = TextStyle(
+  static TextStyle font13GrayRegular = TextStyle(
     fontSize: 13.sp,
     fontWeight: FontWeightHelper.normal,
     color: ColorsManger.gray,
   );
 
-  static TextStyle font12Graynormal = TextStyle(
+  static TextStyle font12GrayRegular = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeightHelper.normal,
     color: ColorsManger.gray,
@@ -64,31 +64,31 @@ class TextStyles {
     color: ColorsManger.gray,
   );
 
-  static TextStyle font12DarkBluenormal = TextStyle(
+  static TextStyle font12DarkBlueRegular = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeightHelper.normal,
     color: ColorsManger.darkBlue,
   );
 
-  static TextStyle font12Bluenormal = TextStyle(
+  static TextStyle font12BlueRegular = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeightHelper.normal,
     color: ColorsManger.mainBlue,
   );
 
-  static TextStyle font13Bluenormal = TextStyle(
+  static TextStyle font13BlueRegular = TextStyle(
     fontSize: 13.sp,
     fontWeight: FontWeightHelper.normal,
     color: ColorsManger.mainBlue,
   );
 
-  static TextStyle font14Graynormal = TextStyle(
+  static TextStyle font14GrayRegular = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.normal,
     color: ColorsManger.gray,
   );
 
-  static TextStyle font14LightGraynormal = TextStyle(
+  static TextStyle font14LightGrayRegular = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.normal,
     color: ColorsManger.lightGray,

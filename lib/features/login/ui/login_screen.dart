@@ -1,11 +1,7 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/helpers/spaceing.dart';
 import 'package:flutter_application_1/core/theming/styles.dart';
 import 'package:flutter_application_1/core/widget/app_text_button.dart';
-import 'package:flutter_application_1/core/widget/login_text_filed.dart';
-import 'package:flutter_application_1/features/login/data/models/login_screen_body.dart';
 import 'package:flutter_application_1/features/login/logic/cubit/login_cubit.dart';
 import 'package:flutter_application_1/features/login/ui/widget/already_have_account.dart';
 import 'package:flutter_application_1/features/login/ui/widget/email_and_password.dart';
@@ -32,7 +28,7 @@ class LoginScreen extends StatelessWidget {
               heightSpace(10),
               Text(
                 "We're excited to have you back, can't wait to see what you'vebeen up to since you last logged in.",
-                style: TextStyles.font12Graynormal,
+                style: TextStyles.font12GrayRegular,
               ),
               heightSpace(36),
 
@@ -46,7 +42,7 @@ class LoginScreen extends StatelessWidget {
                       onPressed: () {},
                       child: Text(
                         "Forgot Password?",
-                        style: TextStyles.font13Bluenormal,
+                        style: TextStyles.font13BlueRegular,
                       ),
                     ),
                   ),
