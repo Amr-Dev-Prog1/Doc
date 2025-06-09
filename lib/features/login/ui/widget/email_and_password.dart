@@ -4,8 +4,6 @@ import 'package:flutter_application_1/core/helpers/app_regex.dart';
 import 'package:flutter_application_1/core/helpers/spaceing.dart';
 import 'package:flutter_application_1/core/widget/login_text_filed.dart';
 import 'package:flutter_application_1/features/login/logic/cubit/login_cubit.dart';
-import 'package:flutter_application_1/features/login/ui/widget/email_and_password.dart'
-    as passwordController;
 import 'package:flutter_application_1/features/login/ui/widget/passwordValidations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
