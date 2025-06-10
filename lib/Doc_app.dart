@@ -4,10 +4,8 @@ import 'package:flutter_application_1/core/routing/routes.dart';
 import 'package:flutter_application_1/core/theming/colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
-
 class DocApp extends StatelessWidget {
-final AppRouter appRouter ;
+  final AppRouter appRouter;
   const DocApp({super.key, required this.appRouter});
 
   @override
@@ -20,9 +18,7 @@ final AppRouter appRouter ;
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Doc App',
-          theme: ThemeData(
-            primaryColor: ColorsManger.mainBlue,
-          ),
+          theme: ThemeData(primaryColor: ColorsManger.mainBlue),
           onGenerateRoute: appRouter.generateRoute,
           initialRoute: Routes.onBording,
         );
